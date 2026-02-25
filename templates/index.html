@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Audio Downloader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="logo">▶ ytdl</div>
+    <h1>Download your audio now.</h1>
+
+    <div class="card">
+      <div id="ffmpeg-warn" class="ffmpeg-warn">
+        ⚠️ FFmpeg not found. Audio conversion may fail.
+      </div>
+
+      <div>
+        <label>Video link</label>
+        <input type="text" id="url-input" placeholder="https://youtube.com/watch?v=..." />
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Format</label>
+          <select id="format-select">
+            <option value="mp3">MP3</option>
+            <option value="m4a">M4A</option>
+            <option value="opus">OPUS</option>
+            <option value="wav">WAV</option>
+          </select>
+        </div>
+        <div>
+          <label>Quality</label>
+          <select id="quality-select">
+            <option value="320">320 kbps</option>
+            <option value="256">256 kbps</option>
+            <option value="192">192 kbps</option>
+            <option value="128">128 kbps</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn" id="download-btn" onclick="startDownload()">Download audio</button>
+
+      <div id="status-box">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="status-msg" id="status-msg">Starting...</div>
+        <a class="download-btn" id="save-btn" href="#" download>⬇ Save file</a>
+      </div>
+    </div>
+
+    <div class="footer">runs locally · no data sent to third parties</div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
