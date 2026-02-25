@@ -38,22 +38,6 @@ The production environment includes:
 - FFmpeg for audio conversion
 
 The app runs as a public web service accessible via the live demo URL.
-
-### Deploy on Railway
-1. Create an account at https://railway.app
-2. Click "New Project" → "Deploy from GitHub"
-3. Push this folder to a GitHub repository and connect it
-4. Set the environment variable: `PORT=5000`
-5. Done — Railway auto-detects `requirements.txt`
-
-### Deploy on Render
-1. Create an account at https://render.com
-2. Click "New Web Service" → connect the repository
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `python app.py`
-
-> ⚠️ Files downloaded in cloud environments are temporary. Use a storage service (e.g. AWS S3) for persistence.
-
 ---
 
 ## ▶ Run Locally
@@ -127,28 +111,10 @@ http://localhost:5000
 ```
 
 ---
-
-## 📁 Project Structure
-
-```
-.
-├── app.py               # Flask server
-├── templates/
-│   └── index.html       # Main page
-├── static/
-│   ├── style.css        # Styles
-│   └── script.js        # Frontend logic
-├── requirements.txt     # Python dependencies
-└── README.md
-```
-
----
-
 ## ⚠️ Disclaimer
 
 This project is intended for educational purposes only.
 Users are responsible for complying with YouTube's Terms of Service and applicable copyright laws.
-
 ---
 
 ## 👨‍💻 Author
