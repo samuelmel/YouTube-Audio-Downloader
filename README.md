@@ -1,72 +1,158 @@
 # 🎵 YouTube Audio Downloader - Web
 
-A simple web interface to download audio from YouTube.
-Paste the link, choose the format, and click download.
+🚀 **Live Demo:** https://your-app-name.railway.app
+
+A simple and intuitive web application that allows users to download audio from YouTube videos directly from the browser.
+
+Paste the video link, choose the format, and download the audio in seconds.
 
 ---
 
-## ▶ How to Run
+## ✨ Features
 
-### Windows
-
-1. Install Python: https://www.python.org/downloads/
-2. Open **Command Prompt** in the project folder
-3. Run:
-
-```
-pip install flask yt-dlp
-python app.py
-```
-
-4. Open your browser at: **http://localhost:5000**
+- Download audio from YouTube videos
+- Automatic audio conversion using FFmpeg
+- Clean and simple interface
+- Server-side processing
+- Production deployment on Railway
 
 ---
 
-### macOS
+## 🛠 Tech Stack
 
-1. Open **Terminal** in the project folder
-2. Run:
+- Python
+- Flask
+- yt-dlp
+- FFmpeg
+- Railway (Cloud Hosting)
+
+---
+
+## ☁️ Deployment
+
+This application is deployed using Railway as a cloud web service.
+
+The production environment includes:
+- Python runtime
+- yt-dlp for media extraction
+- FFmpeg for audio conversion
+
+The app runs as a public web service accessible via the live demo URL.
+
+### Deploy on Railway
+1. Create an account at https://railway.app
+2. Click "New Project" → "Deploy from GitHub"
+3. Push this folder to a GitHub repository and connect it
+4. Set the environment variable: `PORT=5000`
+5. Done — Railway auto-detects `requirements.txt`
+
+### Deploy on Render
+1. Create an account at https://render.com
+2. Click "New Web Service" → connect the repository
+3. Build command: `pip install -r requirements.txt`
+4. Start command: `python app.py`
+
+> ⚠️ Files downloaded in cloud environments are temporary. Use a storage service (e.g. AWS S3) for persistence.
+
+---
+
+## ▶ Run Locally
+
+Clone the repository:
 
 ```bash
-pip3 install flask yt-dlp
-python3 app.py
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 ```
 
-3. Open your browser at: **http://localhost:5000**
+Create and activate a virtual environment:
 
----
+**Windows**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
-### Linux
+**macOS/Linux**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-1. Open **Terminal** in the project folder
-2. Run:
+Install dependencies:
 
 ```bash
-pip install flask yt-dlp --break-system-packages
-python3 app.py
+pip install -r requirements.txt
 ```
 
-3. Open your browser at: **http://localhost:5000**
+Install FFmpeg (required for audio conversion):
 
----
-
-## ⚠️ FFmpeg (required for audio conversion)
-
-### Windows
-```
+**Windows**
+```bash
 winget install ffmpeg
 ```
-Or download from: https://www.gyan.dev/ffmpeg/builds/
+Or download manually at: https://www.gyan.dev/ffmpeg/builds/
 
-### macOS
-```
+**macOS**
+```bash
 brew install ffmpeg
 ```
 
-### Linux (Ubuntu/Debian)
-```
+**Ubuntu/Debian**
+```bash
+sudo apt update
 sudo apt install ffmpeg
+```
+
+**Fedora**
+```bash
+sudo dnf install ffmpeg
+```
+
+**Arch Linux**
+```bash
+sudo pacman -S ffmpeg
+```
+
+Run the application:
+
+```bash
+python app.py
+```
+
+Open your browser at:
+
+```
+http://localhost:5000
 ```
 
 ---
 
+## 📁 Project Structure
+
+```
+.
+├── app.py               # Flask server
+├── templates/
+│   └── index.html       # Main page
+├── static/
+│   ├── style.css        # Styles
+│   └── script.js        # Frontend logic
+├── requirements.txt     # Python dependencies
+└── README.md
+```
+
+---
+
+## ⚠️ Disclaimer
+
+This project is intended for educational purposes only.
+Users are responsible for complying with YouTube's Terms of Service and applicable copyright laws.
+
+---
+
+## 👨‍💻 Author
+
+**Samuel Mendes** — Computer Science Student | Backend & Automation Developer
+
+GitHub: https://github.com/samuelmel
